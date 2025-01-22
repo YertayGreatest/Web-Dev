@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>The HTML <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <area> tags.</h3>
+
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+
+<h3>The image is inserted using the <img> tag. The only difference from other images is that you must add a usemap attribute:</h3>
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<h3>The <map> element is used to create an image map, and is linked to the image by using the required name attribute:</h3>
+    <map name="workmap">
+    
+    <h3>You must define the shape of the clickable area, and you can choose one of these values:
+
+        rect - defines a rectangular region
+        circle - defines a circular region
+        poly - defines a polygonal region
+        default - defines the entire region</h3>
+    <area shape="rect" coords="34, 44, 270, 350" href="computer.htm">
+    <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm">
+
+    <h3>A clickable area can also trigger a JavaScript function.
+
+        Add a click event to the <area> element to execute a JavaScript function:</h3>
+    <map name="workmap">
+        <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+      </map>
+      
+      <script>
+      function myFunction() {
+        alert("You clicked the coffee cup!");
+      }
+      </script>
+</body>
+</html>
