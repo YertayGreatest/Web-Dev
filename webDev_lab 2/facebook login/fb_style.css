@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.everything {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    background: #f0f2f5;
+}
+
+.inputs {
+    margin-bottom: 100px;
+}
+
+.everything .message {
+    font-size: 30px;
+    margin-right: 150px;
+    margin-bottom: 240px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+form input {
+    height: 55px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    padding: 0 14px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #1877f2;
+}
+
+
+.loginandforgot {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+
+.loginandforgot .loginbtn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1877f2;
+    padding: 15px 0;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.loginandforgot .loginbtn:hover{
+    background:#0d65d9;
+}
+
+form a {
+    text-decoration: none;
+}
+
+.loginandforgot .forgotpwbtn {
+    display: inline-block; /* or inline */
+    color: #1877f2;
+    font-size: 1.1rem;
+    padding: 0; /* Remove unnecessary padding */
+}
+
+
+.loginandforgot .forgotpwbtn:hover{
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.newacc {
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.newacc .newaccbtn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #42b72a;
+    padding: 15px 7px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.newacc .newaccbtn:hover{
+    background:#3ba626;
+}
+
+.everything .inputs p {
+    text-align: center;
+    margin-top: 16px;
+
+}
+
+.everything .inputs p a {
+    text-decoration: none;
+    color:  black;
+    font-weight: bold;
+}
+
+.everything .inputs p a:hover{
+    text-decoration: underline;
+}
+
+#fb {
+    color:#1877f2;
+    font-size: 4rem
+}
+
+/* footer first */
+.languages {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 8px 0;
+    margin-left: 3vh;
+}
+
+footer ol:first-child {
+    border-bottom: 1px solid #b8b9bb;
+}
+
+/* plus button bottom right */
+footer ol:first-child li:last-child button {
+    background-color: #f5f6f7;
+    border: 1px solid #ccd0d5;
+    cursor: pointer;
+    outline: none;
+    color: #4b4f56;
+    padding: 0 8px;
+    font-weight: 700;
+    font-size: 12px;
+    transition: 0.2s ease;
+}
+
+footer ol:first-child li:last-child button:hover {
+    background-color: #cbcbcb;
+    border-color: #b8b9bb;
+}
+
+/* second */
+footer ol li {
+    padding-right: 20px;
+    font-size: 14px;
+    color: #8a8d91;
+}
+
+
+footer ol li a {
+    text-decoration: none;
+    color: #8a8d91;
+}
+
+footer ol li a:hover {
+    text-decoration: underline;
+}
+
