@@ -197,3 +197,8 @@ footer ol li a:hover {
     text-decoration: underline;
 }
 
+footer small {
+    font-size: 14px;
+    color: #8a8d91;
+    margin-left: 3vh;
+}
