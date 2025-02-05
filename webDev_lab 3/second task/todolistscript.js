@@ -1,4 +1,3 @@
-// todolistscript.js
 // elements we interact with
 const inputField = document.getElementById('inputField');
 const addButton = document.getElementById('addButton');
@@ -59,7 +58,7 @@ function addTask() {
         inputField.value = '';
 
 
-        
+
         //for deleting
         deleteButton.addEventListener('click', () => {
             todoList.removeChild(todoItem);
