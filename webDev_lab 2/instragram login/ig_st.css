@@ -12,9 +12,12 @@
 }
 
 .images {
+    order: 2;
     display: flex;
     margin-right: 4%;
+    margin-left: 50px;
 }
+
 
 
 .main-box{
