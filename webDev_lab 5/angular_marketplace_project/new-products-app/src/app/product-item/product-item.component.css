@@ -1,0 +1,121 @@
+/* product card */
+.product-card {
+    min-height: 400px;
+    height: 97%;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+}
+
+/* remove button */
+.remove-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.remove-button:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+/* image */
+.product-image {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* content */
+.product-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.product-description {
+    margin: 8px 0;
+    color: #666;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* store link */
+.store-link {
+    text-decoration: none;
+    color: purple;
+    display: inline-block;
+    margin: 8px 0;
+    margin-top: auto;
+}
+
+.store-link:hover {
+    text-decoration: underline;
+}
+
+/* like button */
+.like-button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    margin: 8px 0;
+}
+
+.like-button:hover {
+    color: #333;
+}
+
+/* share buttons section */
+.share-buttons {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+.share-button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+}
+
+.share-button:hover {
+    background-color: rgb(69, 0, 69);
+    color: rgb(181, 181, 181);
+    transition: 0.1s;
+}
+
+

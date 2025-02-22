@@ -1,0 +1,18 @@
+<header class="navbar">
+  <h1>PRODUCTS</h1>
+</header>
+
+<main class="conten-container">
+  <nav class="categories-container">
+    <button
+      *ngFor="let category of categories"
+      (click)="selectCategory(category)"
+      [class]="'category-button ' + (selectedCategory === category ? 'active' : '')"
+      [attr.aria-selected]="selectedCategory === category">
+      {{ category }}
+    </button>
+  </nav>
+
+  <app-product-list [products]="filteredProducts" (removeProduct)="removeProduct($event)">
+  </app-product-list>
+</main>
