@@ -1,0 +1,36 @@
+<div class="product-card">
+    <button 
+      (click)="onRemove()" class="remove-button">✕</button>
+    
+    <img [src]="product.imageUrl" alt="{{ product.name }}" class="product-image">
+    
+    <h3 class="product-name">{{ product.name }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+    
+      <button (click)="incrementLikes()" class="like-button">
+        <span>♥</span>
+        <span>{{ product.likes }}</span>
+      </button>
+      
+      <p class="store-visit"><strong>Store: </strong> 
+        <a [href]="product.storeUrl" 
+           target="_blank"
+           class="store-link">
+          Visit Store
+        </a>
+      </p>
+    
+    <div class="share-buttons">
+      <a [href]="getWhatsAppShareUrl()"
+         target="_blank"
+         class="share-button">
+        WhatsApp
+      </a>
+      <a [href]="getTelegramShareUrl()"
+         target="_blank"
+         class="share-button">
+        Telegram
+      </a>
+    </div>
+</div>
+
