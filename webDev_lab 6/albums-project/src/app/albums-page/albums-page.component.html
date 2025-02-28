@@ -1,0 +1,21 @@
+<button class="backToAbout" (click)="backToAbout()">Back to About Page</button>
+<div class="albums-container">
+  <h2>Albums</h2>
+  
+  <div *ngIf="loading" class="loading">
+    Loading albums...
+  </div>
+  
+  <div *ngIf="albums.length > 0" class="albums-list">
+    <div *ngFor="let album of albums" class="album-card" (click)="viewAlbumDetails(album.id)">
+      <h3>{{ album.title }}</h3>
+      <p>Album ID: {{ album.id }}</p>
+      <p>User ID: {{ album.userId }}</p>
+      <button class="delete-btn" (click)="deleteAlbum($event, album.id)">Delete</button>
+    </div>
+  </div>
+  
+  <div *ngIf="!loading && albums.length === 0" class="no-albums">
+    No albums found
+  </div>
+</div>

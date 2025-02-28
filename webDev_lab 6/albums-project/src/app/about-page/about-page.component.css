@@ -1,0 +1,37 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin-top: 200px;
+    font-size: 60px;
+}
+
+span {
+    color: purple;
+}
+
+.buttons {
+    display: flex;
+    gap: 100px;
+}
+
+.buttons button {
+    width: 240px;
+    height: 150px;
+    font-size: 40px;
+    background-color: rgb(165, 212, 72);
+    transition: 0.13s;
+    border-radius: 10px;
+}
+
+.buttons button:hover {
+    background-color: rgb(148, 194, 63);
+}
+
+.buttons button:active {
+    background-color: rgb(109, 141, 51);
+}    
