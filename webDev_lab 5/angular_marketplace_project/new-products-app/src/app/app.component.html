@@ -7,8 +7,7 @@
     <button
       *ngFor="let category of categories"
       (click)="selectCategory(category)"
-      [class]="'category-button ' + (selectedCategory === category ? 'active' : '')"
-      [attr.aria-selected]="selectedCategory === category">
+      [class]="'category-button ' + (selectedCategory === category ? 'active' : '')">
       {{ category }}
     </button>
   </nav>
