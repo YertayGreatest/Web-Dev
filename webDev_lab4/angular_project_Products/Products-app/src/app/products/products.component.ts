@@ -1,15 +1,13 @@
 import { Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-interface Product {
+interface Product{
   image: string;
   name: string;
   description: string;
   rating: number;
   link: string;
 }
-
-
 
 @Component({
   selector: 'app-products',
