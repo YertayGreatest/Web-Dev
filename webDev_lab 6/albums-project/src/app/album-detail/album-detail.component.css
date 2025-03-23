@@ -1,0 +1,76 @@
+.back-button {
+    width: 150px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: rgb(113, 251, 113);
+    font-size: 25px;
+    border-radius: 10px;
+    }
+    .back-button:hover {
+        background-color: rgb(78, 208, 78);
+        color: rgb(211, 211, 211);
+        cursor: pointer;
+    }
+    .back-button:active {
+        background-color: rgb(46, 116, 46);
+        color: rgb(150, 150, 150);
+    }
+
+
+.album-details-container {
+    margin-left: 200px;
+    }
+    .header {
+        margin-top: 30px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+    .loading-saving-title {
+        margin-left: 200px;
+    }
+    .album-info {
+        margin-left: 120px;
+        margin-top: 20px;
+        }
+        input {
+            margin-left: 20px;
+        }
+        .save-button {
+            margin-left: 20px;
+            width: 65px;
+            height: 40px;
+            background-color: rgb(58, 58, 255);
+            font-size: 15px;
+            color: white;
+            }
+            .save-button:hover {
+                background-color: rgb(38, 38, 180);
+                color:rgb(198, 198, 198);
+                cursor: pointer;
+            }
+            .save-button:active {
+                background-color: rgb(15, 15, 60);
+                color: rgb(161, 161, 161);
+            }
+        .photos-button {
+            margin-left: 20px;
+            margin-top: 15px;
+            width: 120px;
+            height: 45px;
+            background-color: burlywood;
+            font-size: 17px;
+            border-radius: 10px;
+            }
+            .photos-button:hover {
+                background-color: rgb(161, 131, 93);
+                cursor: pointer;
+            }
+            .photos-button:active {
+                background-color: rgb(156, 127, 88);
+                color: black;
+            }
+        
+            
+        

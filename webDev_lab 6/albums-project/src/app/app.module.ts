@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { AlbumsPageComponent } from './albums-page/albums-page.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { AlbumPhotosComponent } from './album-photos/album-photos.component';
 
 
 @NgModule({
@@ -16,11 +18,13 @@ import { AlbumDetailComponent } from './album-detail/album-detail.component';
     HomePageComponent,
     AboutPageComponent,
     AlbumsPageComponent,
-    AlbumDetailComponent
+    AlbumDetailComponent,
+    AlbumPhotosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [
     provideHttpClient()
