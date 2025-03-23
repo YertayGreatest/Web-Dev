@@ -11,6 +11,7 @@
 .backToAbout:hover {
   background-color: rgb(124, 248, 124);
   cursor: pointer;
+
 }
 .backToAbout:active {
   background-color: rgb(91, 248, 91);
@@ -76,7 +77,6 @@
   .delete-btn:active {
     background-color: rgb(148, 1, 1);
   }
-
 
 
   
