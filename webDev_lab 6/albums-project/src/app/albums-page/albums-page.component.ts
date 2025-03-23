@@ -4,6 +4,7 @@ import { AlbumsService, Album } from '../albums.service';
 
 
 
+
 @Component({
   selector: 'app-albums-page',
   standalone: false,
@@ -11,7 +12,9 @@ import { AlbumsService, Album } from '../albums.service';
   styleUrl: './albums-page.component.css'
 })
 
+
 export class AlbumsPageComponent implements OnInit {
+
   albums: Album[] = [];
   loading = false;
 
