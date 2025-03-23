@@ -4,14 +4,15 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { AlbumsPageComponent } from './albums-page/albums-page.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { AlbumPhotosComponent } from './album-photos/album-photos.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomePageComponent},
   { path: 'about', component: AboutPageComponent},
   { path: 'albums', component: AlbumsPageComponent},
   { path: 'albums/:id', component: AlbumDetailComponent},
-  {path: '**', redirectTo: '/albums'}
+  { path: 'albums/:id/photos', component: AlbumPhotosComponent}
 ];
 
 @NgModule({

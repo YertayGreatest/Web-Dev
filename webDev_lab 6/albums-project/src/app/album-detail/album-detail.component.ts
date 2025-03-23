@@ -1,15 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
-
-interface detAlbum{
-  albumId: number;
-  id: number;
-  title: string;
-  url: string;
-  thumbnailUrl: string;
-}
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { AlbumsService, Album } from '../albums.service';
 
 
 @Component({
@@ -21,10 +12,15 @@ interface detAlbum{
 
 export class AlbumDetailComponent implements OnInit{
   albumId: number = 0;
-  detAlbums: detAlbum[] = [];
+  album: Album | null = null;
   loading = false;
+  titleLoading = false;
+  editTitle: string = '';
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private albumsService: AlbumsService, 
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
       this.route.params.subscribe(params => {
@@ -35,10 +31,11 @@ export class AlbumDetailComponent implements OnInit{
 
   fetchAlbumDetails(): void{
     this.loading = true;
-    this.http.get<detAlbum[]>(`https://jsonplaceholder.typicode.com/albums/${this.albumId}/photos`)
+    this.albumsService.getAlbumById(this.albumId)
     .subscribe({
-      next: (data: detAlbum[]) => {
-        this.detAlbums = data.length > 0 ? [data[0]] : [];
+      next: (data: Album) => {
+        this.album = data;
+        this.editTitle = data.title;
         this.loading = false;
       },
       error: (err: any) => {
@@ -47,4 +44,35 @@ export class AlbumDetailComponent implements OnInit{
       }
     })
   }
+
+  saveTitle(): void {
+    if (!this.album) {
+      return;
+    }
+
+    
+    this.titleLoading = true;
+    const updatedAlbum: Album = {
+      ...this.album,
+      title: this.editTitle
+    };
+    
+    this.albumsService.updateAlbum(updatedAlbum)
+    .subscribe({
+      next: (data: Album) => {
+        this.album = data;
+        this.titleLoading = false;
+      },
+      error: (err: any) => {
+        console.error(err);
+        this.titleLoading = false;
+      }
+    });
+  }
+
+  
+  viewPhotos(): void {
+    this.router.navigate(['/albums', this.albumId, 'photos']);
+  }
+  
 }

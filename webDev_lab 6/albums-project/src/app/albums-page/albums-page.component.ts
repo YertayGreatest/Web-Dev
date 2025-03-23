@@ -1,12 +1,7 @@
 import { Component, OnInit} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AlbumsService, Album } from '../albums.service';
 
-interface Album {
-  userId: number;
-  id: number;
-  title: string;
-}
 
 
 @Component({
@@ -16,12 +11,12 @@ interface Album {
   styleUrl: './albums-page.component.css'
 })
 
-export class AlbumsPageComponent {
+export class AlbumsPageComponent implements OnInit {
   albums: Album[] = [];
   loading = false;
 
   constructor(
-    private http: HttpClient,
+    private albumsService: AlbumsService,
     private router: Router
   ) {};
 
@@ -31,7 +26,7 @@ export class AlbumsPageComponent {
 
   fetchAlbums(): void {
     this.loading = true;
-    this.http.get<Album[]>('https://jsonplaceholder.typicode.com/albums')
+    this.albumsService.getAlbums()
       .subscribe({
         next: (data: Album[]) => {
           this.albums = data;
@@ -51,13 +46,15 @@ export class AlbumsPageComponent {
   deleteAlbum(event: Event, id: number): void {
     event.stopPropagation();
     
-    this.http.delete(`https://jsonplaceholder.typicode.com/albums/${id}`)
+    this.albumsService.deleteAlbum(id)
       .subscribe({
         next: () => {
-          this.albums = this.albums.filter(album => album.id !== id);
+          this.albumsService.getAlbums().subscribe(albums => {
+            this.albums = albums;
+          })
         },
         error: (error: any) => {
-          console.error(`Error deleting album ${id}:`, error);
+          console.error(`Error in deleting album ${id}:`, error);
         }
       });
   }
