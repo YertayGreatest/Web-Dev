@@ -1,0 +1,19 @@
+<a [routerLink]="['/companies']">Back to Companies</a>
+
+<h2>Vacancies for Company #{{ companyId }}</h2> <div *ngIf="isLoading">
+  <p>Loading vacancies...</p>
+</div>
+
+<div *ngIf="error">
+  <p>{{ error }}</p>
+</div>
+
+<ul *ngIf="!isLoading && !error && vacancies.length > 0">
+  <li *ngFor="let vacancy of vacancies">
+    <strong>{{ vacancy.name }}</strong> - Salary: {{ vacancy.salary | currency:'USD' }} <p>{{ vacancy.description }}</p>
+  </li>
+</ul> 
+
+<p *ngIf="!isLoading && !error && vacancies.length === 0">
+  No vacancies found for this company.
+</p>
